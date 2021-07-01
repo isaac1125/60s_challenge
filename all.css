@@ -12,6 +12,18 @@ body{
 #playPage,#endPage{
     display: none;
 }
+
 .numboard{
+    text-align: center;
+    max-width: 300px;
+    display: block;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+@media(min-width:414px){
+    .numboard{
+        display: none;
+    }
 }

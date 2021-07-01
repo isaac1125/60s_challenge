@@ -41,6 +41,8 @@ btnEnter.addEventListener("click", function (e) {
     score.textContent = countScore;
     answerSheet.value = "";
     printQuestion();
+    str = "";
+    answerSheet.value = str;
 })
 
 document.addEventListener("keydown", function (e) {
@@ -58,6 +60,13 @@ document.addEventListener("keydown", function (e) {
     };
 })
 
+let str = "";
+numboard.addEventListener("click", function (e) {
+    if (e.target.getAttribute("data-num") == 0 || e.target.getAttribute("data-num") == 1 || e.target.getAttribute("data-num") == 2 || e.target.getAttribute("data-num") == 3 || e.target.getAttribute("data-num") == 4 || e.target.getAttribute("data-num") == 5 || e.target.getAttribute("data-num") == 6 || e.target.getAttribute("data-num") == 7 || e.target.getAttribute("data-num") == 8 || e.target.getAttribute("data-num") == 9) {
+        str += e.target.getAttribute("data-num");
+        answerSheet.value = str;
+    }
+})
 
 
 //再來一局
