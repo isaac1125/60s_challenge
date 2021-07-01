@@ -77,6 +77,8 @@ btnRestart.addEventListener("click", function (e) {
     setTime.textContent = "01:00";
     countScore = 0;
     score.textContent = 0;
+    str = "";
+    answerSheet.value = str;
 })
 
 
