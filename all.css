@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+    background-color: #FD903E;
+}
+#titlePage,#playPage,#endPage{
+    width: 100vw;
+    height: 100vh;
+}
+#playPage,#endPage{
+    display: none;
+}
+.numboard{
+    margin: 0 auto;
+}

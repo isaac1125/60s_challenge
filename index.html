@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60 seconds challenge</title>
+    <link rel="stylesheet" href="all.css">
+</head>
+
+<body>
+    <div id="titlePage">
+        <h1>
+            <p>60秒</p>
+            <p>+-×÷</p>
+            <p>挑戰</p>
+        </h1>
+        <div>
+            <input type="button" class="btnStart" value="開始"></input>
+            <i>挑戰最高分</i>
+        </div>
+    </div>
+    <div id="playPage">
+        <h2>
+            <div class="subTitle">60秒挑戰</div>
+            <div>分數</div>
+            <div class="score">0</div>
+        </h2>
+        <div>
+            <i>
+                <span class="setTime">01:00</span>
+            </i>
+        </div>
+        <p>
+            <span class="num1">3</span>
+            <span class="questionSign">+</span>
+            <span class="num2">4</span>
+        </p>
+        <p><span>=</span><input type="text" class="answerSheet" value=""></p>
+        <input type="button" class="btnEnter" value="確定！"></input>
+
+        <table class="numboard">
+            <tr>
+                <th data-num="1">1</th>
+                <th data-num="2">2</th>
+                <th data-num="3">3</th>
+            </tr>
+            <tr>
+                <th data-num="4">4</th>
+                <th data-num="5">5</th>
+                <th data-num="6">6</th>
+            </tr>
+            <tr>
+                <th data-num="7">7</th>
+                <th data-num="8">8</th>
+                <th data-num="9">9</th>
+            </tr>
+            <tr>
+                <th colspan="3"><input type="button" class="btnEnter" value="確定！"></th>
+            </tr>
+        </table>
+    </div>
+    <div id="endPage">
+        <div class="subTitle">60秒挑戰</div>
+        <h3><span></span>最終分數<span></span></h3>
+        <div class="finalScore">0</div>
+        <button class="btnRestart">再一次</button>
+    </div>
+    <script src="all.js"></script>
+</body>
+
+</html>
