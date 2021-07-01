@@ -22,7 +22,7 @@ body{
     justify-content: center;
 }
 
-@media(min-width:414px){
+@media(min-width:769px){
     .numboard{
         display: none;
     }
