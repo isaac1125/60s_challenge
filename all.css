@@ -1,9 +1,62 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*,*::before,*::after{
+	box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+}
+a{
+	text-decoration: none;
+}
 *{
     box-sizing: border-box;
 }
 body{
     text-align: center;
     background-color: #FD903E;
+    font-family: Verdana, cwTeXYen;;
 }
 #titlePage,#playPage,#endPage{
     width: 100vw;
@@ -12,18 +65,180 @@ body{
 #playPage,#endPage{
     display: none;
 }
+h1{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+i{
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: #000 2px 0 1px;
+    padding-top: 5px;
+}
+
+#titlePage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#playPage{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#endPage{
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    font-size: 48px;
+}
+.start{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn{
+    font-size: 24px;
+    background: #000;
+    color: #fff;
+    
+    width: 130px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.challenge{
+    display: flex;
+    align-items: center;
+}
+.heading1{
+    font-size: 72px;
+    font-weight: bold;
+    color: white;
+    text-shadow: black 5px 0 0;
+    animation: moveInLeft 0.5s;
+}
+
+.heading2{
+    font-size: 32px;
+    color: #fff;
+    animation: moveInRight 0.5s;
+}
+.heading3{
+    font-size: 56px;
+    margin: 10px;
+    font-weight: bold;
+    animation: moveInRight 0.5s;
+}
 
 .numboard{
     text-align: center;
-    max-width: 300px;
+    max-width: 400px;
     display: block;
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    font-size: 32px;
+    background: #fff;
+    
+}
+.numboard th{
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+
+.whiteLine{
+    height: 3px;
+    width: 100px;
+    background: #fff;
+    margin: 2px auto;
+}
+.whiteLine2{
+    height: 3px;
+    width: 50px;
+    background: #fff;
+    margin: 2px auto;
+}
+
+.subTitle{
+    font-size: 28px;
+    width: 170px;
+    color: #fff;
+    background: #FD903E;
+    border: 2px solid #fff;
+}
+.scoreText{
+    font-size: 28px;
+    width: 100px;
+    color: #FD903E;
+    background:  #fff;
+    border: 2px solid #fff;
+}
+
+.score{
+    font-size: 28px;
+    margin-left: 10px;
+}
+.finalScore{
+    font-size: 54px;
+}
+
+.question{
+    font-size: 32px;
+}
+
+.setTime{
+    font-size: 40px;
+}
+.answerSheet{
+    height: 50px;
+    width: 100px;
+    border: 3px solid #000;
+    border-radius: 5px;
 }
 
 @media(min-width:769px){
     .numboard{
         display: none;
+    }
+}
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(70px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
     }
 }

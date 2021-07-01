@@ -12,19 +12,31 @@
 <body>
     <div id="titlePage">
         <h1>
-            <p>60秒</p>
-            <p>+-×÷</p>
-            <p>挑戰</p>
+            <div>
+                <p class="heading1">60秒</p>
+            </div>
+            <div class="challenge">
+                <div>
+                    <p class="heading2">+-×÷</p>
+                    <p class="whiteLine"></p>
+                    <p class="whiteLine"></p>
+                </div>
+                <div>
+                    <p class="heading3">挑戰</p>
+                </div>
+
+            </div>
+
         </h1>
-        <div>
-            <input type="button" class="btnStart" value="開始"></input>
-            <i>挑戰最高分</i>
+        <div class="start">
+            <input type="button" class="btnStart btn" value="開始"></input>
+            <i>挑戰更高分！</i>
         </div>
     </div>
     <div id="playPage">
         <h2>
             <div class="subTitle">60秒挑戰</div>
-            <div>分數</div>
+            <div class="scoreText">分數</div>
             <div class="score">0</div>
         </h2>
         <div>
@@ -32,12 +44,12 @@
                 <span class="setTime">01:00</span>
             </i>
         </div>
-        <p>
+        <p class="question">
             <span class="num1">3</span>
             <span class="questionSign">+</span>
             <span class="num2">4</span>
         </p>
-        <p><span>=</span><input type="text" class="answerSheet" value=""></p>
+        <p><span>=</span><input type="text" class="answerSheet btn" value=""></p>
 
 
         <table class="numboard">
@@ -62,13 +74,15 @@
                 <th> </th>
             </tr>
         </table>
-        <input type="button" class="btnEnter" value="確定！"></input>
+        <input type="button" class="btnEnter btn" value="確定"></input>
     </div>
     <div id="endPage">
         <div class="subTitle">60秒挑戰</div>
-        <h3><span></span>最終分數<span></span></h3>
+        <div><span class="whiteLine2"></span>
+            <h3>最終分數</h3><span class="whiteLine2"></span>
+        </div>
         <div class="finalScore">0</div>
-        <button class="btnRestart">再一次</button>
+        <button class="btnRestart btn">再一次</button>
     </div>
     <script src="all.js"></script>
 </body>

@@ -25,7 +25,7 @@ let sign = "+";
 //開始遊戲
 btnStart.addEventListener("click", function (e) {
     titlePage.style.display = "none";
-    playPage.style.display = "block";
+    playPage.style.display = "flex";
     timeUp();
     printQuestion();
 });
@@ -72,7 +72,7 @@ numboard.addEventListener("click", function (e) {
 //再來一局
 btnRestart.addEventListener("click", function (e) {
     endPage.style.display = "none";
-    titlePage.style.display = "block";
+    titlePage.style.display = "flex";
     countTime = 60;
     setTime.textContent = "01:00";
     countScore = 0;
@@ -91,7 +91,7 @@ function timeUp() {
         } else if (countTime == 0) {
             setTime.textContent = "00:00";
             playPage.style.display = "none";
-            endPage.style.display = "block";
+            endPage.style.display = "flex";
             finalScore.textContent = countScore;
             clearInterval(interval);
         }
