@@ -269,6 +269,7 @@ h3{
 }
 
 .enterIcon{
+    display: none;
     width: 45px;
     height: 45px;
     background-image: url(img/enter-key.png);
@@ -277,6 +278,9 @@ h3{
     margin-left: 15px;
     background-repeat: no-repeat;
 }
+.btnPass{
+    display: none;
+}
 
 @media(min-width:769px){
     .numboard{
@@ -284,6 +288,12 @@ h3{
     }
     .btnEnter{
         display: none;
+    }
+    .enterIcon{
+        display: inline-block;
+    }
+    .btnPass{
+        display: block;
     }
 }
 
