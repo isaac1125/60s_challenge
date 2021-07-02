@@ -16,6 +16,7 @@ const btnRestart = document.querySelector(".btnRestart");
 let finalScore = document.querySelector(".finalScore");
 const userName = document.querySelector(".userName");
 const nameBoard = document.querySelector(".nameBoard");
+const btnPass = document.querySelector(".btnPass");
 
 let countTime = 60;
 let countScore = 0;
@@ -76,7 +77,11 @@ numboard.addEventListener("click", function (e) {
         printQuestion();
     }
 })
-
+btnPass.addEventListener("click", function (e) {
+    str = ""
+    answerSheet.value = str;
+    printQuestion();
+})
 
 //再來一局
 btnRestart.addEventListener("click", function (e) {
