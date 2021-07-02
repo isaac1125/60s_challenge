@@ -14,6 +14,8 @@ const numboard = document.querySelector(".numboard");
 const endPage = document.getElementById("endPage");
 const btnRestart = document.querySelector(".btnRestart");
 let finalScore = document.querySelector(".finalScore");
+const userName = document.querySelector(".userName");
+const nameBoard = document.querySelector(".nameBoard");
 
 let countTime = 60;
 let countScore = 0;
@@ -65,6 +67,13 @@ numboard.addEventListener("click", function (e) {
     if (e.target.getAttribute("data-num") == 0 || e.target.getAttribute("data-num") == 1 || e.target.getAttribute("data-num") == 2 || e.target.getAttribute("data-num") == 3 || e.target.getAttribute("data-num") == 4 || e.target.getAttribute("data-num") == 5 || e.target.getAttribute("data-num") == 6 || e.target.getAttribute("data-num") == 7 || e.target.getAttribute("data-num") == 8 || e.target.getAttribute("data-num") == 9) {
         str += e.target.getAttribute("data-num");
         answerSheet.value = str;
+    } else if (e.target.getAttribute("class") == "clear") {
+        str = ""
+        answerSheet.value = str;
+    } else if (e.target.getAttribute("class") == "pass") {
+        str = ""
+        answerSheet.value = str;
+        printQuestion();
     }
 })
 
@@ -95,6 +104,7 @@ function timeUp() {
             playPage.style.display = "none";
             endPage.style.display = "flex";
             finalScore.textContent = countScore;
+            userName.textContent = nameBoard.value;
             clearInterval(interval);
         }
     }, 1000);

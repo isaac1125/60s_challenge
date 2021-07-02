@@ -28,9 +28,12 @@
             </div>
 
         </h1>
+
         <div class="start">
+            <div class="nameSheet"><input type="text" value="" placeholder="挑戰者名稱" class="nameBoard"><i>挑戰更高分！</i></div>
+
+
             <input type="button" class="btnStart btn" value="開始"></input>
-            <i>挑戰更高分！</i>
         </div>
     </div>
     <div id="playPage">
@@ -69,16 +72,17 @@
                 <th data-num="9">9</th>
             </tr>
             <tr>
-                <th> </th>
+                <th class="clear"></th>
                 <th data-num="0">0</th>
-                <th></th>
+                <th class="pass"></th>
             </tr>
         </table>
         <input type="button" class="btnEnter btn" value="確定"></input>
     </div>
     <div id="endPage">
         <div class="subTitle">60秒挑戰</div>
-        <div><span class="whiteLine2"></span>
+        <div>
+            <p class="userName"></p><span class="whiteLine2"></span>
             <h3>最終分數</h3><span class="whiteLine2"></span>
         </div>
         <div class="finalScore">0</div>
